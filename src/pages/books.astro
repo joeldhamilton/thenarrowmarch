@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Books — The Narrow March" description="Books from The Narrow March — devotionals and biblical study for men who take their faith seriously.">
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="/images/banner-alt.jpg" alt="" />
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">From The Narrow March</p>
+      <h1>Books</h1>
+      <p class="page-hero-subtitle">Written for men who take their faith seriously.</p>
+    </div>
+  </section>
+
+  <!-- The Daily Crusader -->
+  <section class="section">
+    <div class="container">
+      <div class="book-entry">
+        <div class="book-card card">
+          <div class="card-accent-top"></div>
+          <p class="book-label">365-Day Devotional</p>
+          <h2>The Daily Crusader: 365 Days of Faith & Discipline</h2>
+          <div class="decorative-line"></div>
+          <p>
+            A 365-day devotional built for men who refuse to drift. Each day's entry is short, direct, and rooted in Scripture —
+            forged to cut through distraction and anchor you in what matters before the world gets a word in.
+          </p>
+          <p>
+            No filler. No fluff. Just the Word and the discipline to live by it. Start on any day. The path is waiting.
+          </p>
+          <p class="book-newsletter-link">
+            This book is also delivered daily via <a href="/daily-crusader">The Daily Crusader newsletter</a> — every morning at 5 AM.
+          </p>
+          <a href="https://www.amazon.com/Daily-Crusader-Days-Faith-Discipline/dp/B0GQPW9THK" class="btn btn-primary" target="_blank" rel="noopener">Get It on Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not by Effort -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="book-entry">
+        <div class="book-card card">
+          <div class="card-accent-top"></div>
+          <p class="book-label">Biblical Study</p>
+          <h2>Not by Effort: How God Grows the Fruit of the Spirit</h2>
+          <div class="decorative-line"></div>
+          <p>
+            The fruit of the Spirit is not a checklist. It's not something you manufacture through willpower or grind into existence by trying harder.
+            It grows — and it grows by the work of God, not the effort of man.
+          </p>
+          <p>
+            This book walks through what Scripture actually says about how love, joy, peace, patience, kindness, goodness, faithfulness,
+            gentleness, and self-control are produced in the life of a believer. Not by effort. By the Spirit.
+          </p>
+          <a href="https://www.amazon.com/Not-Effort-Grows-Fruit-Spirit/dp/B0GTXD6TCV" class="btn btn-primary" target="_blank" rel="noopener">Get It on Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .book-entry {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .book-card {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+  }
+
+  .book-card .card-accent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .book-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .book-card h2 {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .book-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .book-newsletter-link {
+    font-style: italic;
+    font-size: 0.95rem !important;
+  }
+
+  .book-card .btn {
+    margin-top: 0.5rem;
+  }
+</style>
