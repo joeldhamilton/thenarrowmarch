@@ -4,71 +4,124 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="About — The Narrow March">
 
-  <section class="page-header">
-    <div class="container">
-      <h1 class="page-title">About</h1>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="/images/banner-alt.jpg" alt="" />
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">About</p>
+      <h1>The Narrow March</h1>
+      <p class="page-hero-subtitle">A movement for men who understand that faith is not passive.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 2rem;">
+  <!-- Modern Templar -->
+  <section class="section">
     <div class="container">
-      <div class="about-content">
-
-        <div class="about-block">
+      <div class="about-grid">
+        <div class="about-img-col">
+          <img src="/images/profile.jpg" alt="The Narrow March" class="about-main-img" />
+        </div>
+        <div class="about-text-col">
+          <div class="decorative-line"></div>
           <h2>The Modern Templar</h2>
           <blockquote class="about-quote">
             "He rides no horse. He carries no banner. He moves unseen — armored in prayer. Marching through cities of sin like salt through decay. A soldier not of empire — but of eternity."
           </blockquote>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="about-block">
-          <h2>Why "The Narrow March"</h2>
-          <p>
-            <strong>Narrow</strong> — the narrow path (Matthew 7:14). Difficulty. Discipline. Separation from the wide road that leads to destruction.
-          </p>
-          <p>
-            <strong>March</strong> — military movement. Daily steps. Sustained forward motion — not a sprint, but the long obedience in the same direction.
-          </p>
-          <p>
-            Together: step after step after step. The narrow path doesn't walk itself.
-          </p>
+  <!-- Why The Narrow March -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="centered-content">
+        <div class="decorative-cross">&#10013;</div>
+        <h2 class="section-title" style="text-align:center;">Why "The Narrow March"</h2>
+        <div class="decorative-line decorative-line-center"></div>
+        <div class="two-words">
+          <div class="word-block card">
+            <h3>Narrow</h3>
+            <p>The narrow path (Matthew 7:14). Difficulty. Discipline. Separation from the wide road that leads to destruction.</p>
+          </div>
+          <div class="word-block card">
+            <h3>March</h3>
+            <p>Military movement. Daily steps. Sustained forward motion — not a sprint, but the long obedience in the same direction.</p>
+          </div>
         </div>
+        <p class="together-line">Together: step after step after step. The narrow path doesn't walk itself.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="about-block">
-          <h2>Who This Is For</h2>
-          <p>
-            The Narrow March speaks to men who understand that faith is not passive. Men working on personal discipline and self-mastery.
-            Men who are tired of soft, comfortable Christianity that demands nothing and changes no one.
-          </p>
-          <p>
-            Whether you've drifted from the faith and are finding your way back, or you're seeking a faith that demands something of you —
-            this is the place where iron sharpens iron. No shortcuts. No comfort theology. Just the Word of God and the daily discipline to live by it.
-          </p>
+  <!-- Who This Is For -->
+  <section class="section">
+    <div class="container">
+      <div class="centered-content">
+        <h2 class="section-title" style="text-align:center;">Who This Is For</h2>
+        <div class="decorative-line decorative-line-center"></div>
+        <div class="audience-grid">
+          <div class="audience-item">
+            <div class="icon-circle">&#9876;</div>
+            <p>Men working on personal discipline and self-mastery</p>
+          </div>
+          <div class="audience-item">
+            <div class="icon-circle">&#128587;</div>
+            <p>Men tired of soft, comfortable Christianity that demands nothing</p>
+          </div>
+          <div class="audience-item">
+            <div class="icon-circle">&#128296;</div>
+            <p>Men who've drifted from the faith and are finding their way back</p>
+          </div>
+          <div class="audience-item">
+            <div class="icon-circle">&#9775;</div>
+            <p>Men seeking a faith that costs them something — and changes everything</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="about-block">
-          <h2>What We Believe</h2>
+  <!-- What We Believe -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="centered-content">
+        <h2 class="section-title" style="text-align:center;">What We Believe</h2>
+        <div class="decorative-line decorative-line-center"></div>
+        <div class="beliefs card">
           <p>
             We hold to the historic Christian faith. Scripture alone is our authority. Salvation is by grace alone, through faith alone, in Christ alone,
-            to the glory of God alone. We believe the Bible is the inerrant, inspired Word of God — profitable for teaching, reproof, correction,
+            to the glory of God alone.
+          </p>
+          <p>
+            We believe the Bible is the inerrant, inspired Word of God — profitable for teaching, reproof, correction,
             and training in righteousness.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="about-block">
-          <h2>The Mission</h2>
-          <p>
-            We are not building an audience. We are forging soldiers. Every devotional, every sermon, every newsletter exists to accomplish one thing:
-            to equip men to follow the Lamb — not into comfort, but into the fire.
-          </p>
-          <p>The war has never ended. Only the armor has changed.</p>
-        </div>
-
-        <div class="about-cta">
+  <!-- Mission / CTA -->
+  <section class="mission-banner">
+    <div class="mission-bg">
+      <img src="/images/hero-banner.jpg" alt="" />
+    </div>
+    <div class="container">
+      <div class="mission-content">
+        <h2>The Mission</h2>
+        <div class="decorative-line decorative-line-center" style="background:#fff;"></div>
+        <p>
+          We are not building an audience. We are forging soldiers. Every devotional, every sermon, every newsletter exists to accomplish one thing:
+          to equip men to follow the Lamb — not into comfort, but into the fire.
+        </p>
+        <p class="mission-closer">The war has never ended. Only the armor has changed.</p>
+        <div class="mission-ctas">
           <a href="/daily-crusader" class="btn btn-primary">Start the Daily Crusader</a>
-          <a href="/newsletter" class="btn btn-outline">Join the Newsletter</a>
+          <a href="/newsletter" class="btn btn-outline btn-outline-light">Join the Newsletter</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -76,54 +129,222 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-top: 7rem;
-    padding-bottom: 1rem;
+  /* ===== About Grid ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+    align-items: center;
   }
 
-  .page-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  .about-main-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
   }
 
-  .about-content {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .about-block {
-    margin-bottom: 3rem;
-  }
-
-  .about-block h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: var(--text);
-  }
-
-  .about-block p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-    line-height: 1.9;
-    margin-bottom: 1rem;
+  .about-text-col h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .about-quote {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--text-muted);
     font-style: italic;
     border-left: 3px solid var(--accent);
     padding-left: 1.5rem;
-    margin: 1.5rem 0;
   }
 
-  .about-cta {
+  /* ===== Centered Content ===== */
+  .centered-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* ===== Two Words ===== */
+  .two-words {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .word-block {
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  .word-block h3 {
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .word-block p {
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .together-line {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  /* ===== Audience Grid ===== */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .audience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+  }
+
+  .audience-item .icon-circle {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .audience-item p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* ===== Beliefs ===== */
+  .beliefs {
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .beliefs p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .beliefs p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ===== Mission Banner ===== */
+  .mission-banner {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+  }
+
+  .mission-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .mission-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  .mission-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+  }
+
+  .mission-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .mission-content h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .mission-content p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-closer {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--gold) !important;
+    font-size: 1.2rem !important;
+  }
+
+  .mission-ctas {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .btn-outline-light {
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  .btn-outline-light:hover {
+    background: #fff;
+    color: #1a1a1a;
+    border-color: #fff;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .about-main-img {
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    .about-text-col .decorative-line {
+      margin: 0 auto 1.5rem;
+    }
+
+    .about-quote {
+      border-left: none;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .two-words {
+      grid-template-columns: 1fr;
+    }
+
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

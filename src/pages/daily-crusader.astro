@@ -4,47 +4,79 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="The Daily Crusader — 365 Days of Warrior Faith" description="A devotional in your inbox every morning at 5 AM. 365 days rooted in Scripture — built to sharpen your discipline and anchor your day.">
 
-  <section class="page-header">
-    <div class="container">
-      <h1 class="page-title">The Daily Crusader</h1>
-      <p class="page-subtitle">365 Days of Warrior Faith</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="/images/hero-banner.jpg" alt="" />
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">Daily Devotional</p>
+      <h1>The Daily Crusader</h1>
+      <p class="page-hero-subtitle">365 Days of Warrior Faith. Every morning at 5 AM.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 2rem;">
+  <!-- Intro -->
+  <section class="section">
     <div class="container">
-      <div class="crusader-content">
+      <div class="intro-block">
+        <div class="decorative-line decorative-line-center"></div>
+        <p class="intro-text">
+          A devotional in your inbox every morning at 5 AM. 365 days of short, direct entries rooted in Scripture —
+          built to sharpen your discipline and anchor your day before the world gets a word in. No fluff. No comfort theology.
+          The narrow path, one step at a time.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="crusader-intro">
-          <p>
-            A devotional in your inbox every morning at 5 AM. 365 days of short, direct entries rooted in Scripture —
-            built to sharpen your discipline and anchor your day before the world gets a word in. No fluff. No comfort theology.
-            The narrow path, one step at a time.
-          </p>
+  <!-- Features -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card card">
+          <div class="card-accent-top"></div>
+          <div class="icon-circle">&#9788;</div>
+          <h3>Daily at 5 AM</h3>
+          <p>Before the noise starts. Before the enemy gets a word in. Your marching orders arrive first.</p>
         </div>
-
-        <div class="crusader-features">
-          <div class="feature">
-            <h3>Daily at 5 AM</h3>
-            <p>Before the noise starts. Before the enemy gets a word in. Your marching orders arrive first.</p>
-          </div>
-          <div class="feature">
-            <h3>Rooted in Scripture</h3>
-            <p>Every entry is anchored in the Word — not opinion, not trends, not motivational fluff.</p>
-          </div>
-          <div class="feature">
-            <h3>365 Days</h3>
-            <p>This is not a weekend retreat. It's a year-long march. Step after step after step.</p>
-          </div>
+        <div class="feature-card card">
+          <div class="card-accent-top"></div>
+          <div class="icon-circle">&#128214;</div>
+          <h3>Rooted in Scripture</h3>
+          <p>Every entry is anchored in the Word — not opinion, not trends, not motivational fluff.</p>
         </div>
-
-        <div class="crusader-cta card">
-          <h2>Subscribe to The Daily Crusader</h2>
-          <p>Join the march. One devotional every morning. No spam. No fluff. Just the Word.</p>
-          <a href="https://crusader.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe Now</a>
+        <div class="feature-card card">
+          <div class="card-accent-top"></div>
+          <div class="icon-circle">&#9876;</div>
+          <h3>365 Days</h3>
+          <p>This is not a weekend retreat. It's a year-long march. Step after step after step.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="crusader-book">
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-banner-bg">
+      <img src="/images/banner-alt.jpg" alt="" />
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Subscribe to The Daily Crusader</h2>
+        <div class="decorative-line decorative-line-center" style="background:#fff;"></div>
+        <p>Join the march. One devotional every morning. No spam. No fluff. Just the Word.</p>
+        <a href="https://crusader.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Section -->
+  <section class="section">
+    <div class="container">
+      <div class="book-section">
+        <div class="book-text">
+          <div class="decorative-line"></div>
           <h2>The Book</h2>
           <p class="book-title-full"><em>The Daily Crusader: 365 Days of Warrior Faith</em></p>
           <p>
@@ -54,7 +86,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
           <p class="coming-soon">Book availability coming soon.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Cross-link -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="crosslink card">
+        <div class="card-accent-top"></div>
+        <div class="crosslink-inner">
+          <div>
+            <h3>Also from The Narrow March</h3>
+            <p>
+              <strong>The Narrow March Newsletter</strong> — daily exegesis from the week's sermon.
+              The Crusader gives you your marching orders. The Newsletter takes you deeper into the text.
+              They're built to work together.
+            </p>
+          </div>
+          <a href="/newsletter" class="btn btn-outline">Learn More</a>
+        </div>
       </div>
     </div>
   </section>
@@ -62,86 +113,122 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-top: 7rem;
-    padding-bottom: 1rem;
+  .intro-block {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .page-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+  .intro-text {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.9;
   }
 
-  .page-subtitle {
-    font-size: 1.1rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    margin-top: 0.5rem;
+  /* ===== Features ===== */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 
-  .crusader-content {
+  .feature-card {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 2.5rem;
+  }
+
+  .feature-card .icon-circle {
+    margin: 0 auto 1rem;
+  }
+
+  .feature-card .card-accent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .feature-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .feature-card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  /* ===== CTA Banner ===== */
+  .cta-banner {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+  }
+
+  .cta-banner-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .cta-banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cta-banner-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .cta-content p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* ===== Book ===== */
+  .book-section {
     max-width: 700px;
     margin: 0 auto;
   }
 
-  .crusader-intro p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-  }
-
-  .crusader-features {
-    display: grid;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .feature h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-  }
-
-  .feature p {
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  .crusader-cta {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .crusader-cta h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .crusader-cta p {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-  }
-
-  .crusader-book {
-    margin-bottom: 2rem;
-  }
-
-  .crusader-book h2 {
-    font-size: 1.4rem;
+  .book-text h2 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
   }
 
   .book-title-full {
     font-size: 1.1rem;
-    color: var(--text);
+    color: var(--gold);
     margin-bottom: 1rem;
+    font-weight: 500;
   }
 
-  .crusader-book p {
+  .book-text p {
     color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 1rem;
@@ -150,5 +237,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .coming-soon {
     font-style: italic;
     color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ===== Cross-link ===== */
+  .crosslink {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .crosslink-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .crosslink h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .crosslink p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .crosslink .card-accent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .crosslink-inner {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 </style>

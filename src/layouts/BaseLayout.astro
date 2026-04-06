@@ -26,7 +26,10 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   <body>
     <nav class="nav">
       <div class="nav-inner">
-        <a href="/" class="nav-brand">The Narrow March</a>
+        <a href="/" class="nav-brand">
+          <img src="/images/profile.jpg" alt="" class="nav-logo" />
+          The Narrow March
+        </a>
         <button class="nav-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -52,22 +55,33 @@ const { title, description = "The Narrow March — a daily call to arms for men 
 
     <footer class="footer">
       <div class="footer-inner">
-        <div class="footer-brand">
-          <p class="footer-name">The Narrow March</p>
-          <p class="footer-tagline">"Do not follow the Lamb for comfort. Follow Him into the fire."</p>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/images/profile.jpg" alt="The Narrow March" class="footer-logo" />
+            <p class="footer-name">The Narrow March</p>
+            <p class="footer-tagline">"Do not follow the Lamb for comfort.<br/>Follow Him into the fire."</p>
+          </div>
+          <div class="footer-nav">
+            <h4>Pages</h4>
+            <a href="/about">About</a>
+            <a href="/daily-crusader">The Daily Crusader</a>
+            <a href="/newsletter">Newsletter</a>
+            <a href="/sermons">Sermons</a>
+          </div>
+          <div class="footer-nav">
+            <h4>Connect</h4>
+            <a href="https://www.instagram.com/thenarrowmarch" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.youtube.com/@thenarrowmarch" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://blog.thenarrowmarch.com" target="_blank" rel="noopener">Newsletter</a>
+            <a href="https://crusader.thenarrowmarch.com" target="_blank" rel="noopener">Daily Crusader</a>
+          </div>
         </div>
-        <div class="footer-links">
-          <a href="https://www.instagram.com/thenarrowmarch" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.youtube.com/@thenarrowmarch" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://blog.thenarrowmarch.com" target="_blank" rel="noopener">Newsletter</a>
-          <a href="https://crusader.thenarrowmarch.com" target="_blank" rel="noopener">Daily Crusader</a>
-        </div>
+        <div class="footer-divider"></div>
         <p class="footer-copy">&copy; {new Date().getFullYear()} The Narrow March. All rights reserved.</p>
       </div>
     </footer>
 
     <script is:inline>
-      // Theme toggle
       const toggle = document.getElementById('theme-toggle');
       toggle.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme');
@@ -76,7 +90,6 @@ const { title, description = "The Narrow March — a daily call to arms for men 
         localStorage.setItem('theme', next);
       });
 
-      // Mobile nav toggle
       const navToggle = document.querySelector('.nav-toggle');
       const navLinks = document.querySelector('.nav-links');
       navToggle.addEventListener('click', () => {
@@ -103,29 +116,37 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   [data-theme="light"] {
     --bg: #faf8f5;
     --bg-alt: #f0ece6;
+    --bg-dark: #1a1410;
     --text: #1a1a1a;
     --text-muted: #5a5a5a;
     --accent: #8b1a1a;
     --accent-hover: #a52222;
+    --accent-glow: rgba(139, 26, 26, 0.15);
     --border: #d4cfc7;
     --card-bg: #ffffff;
-    --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
     --nav-bg: rgba(250, 248, 245, 0.95);
     --hero-overlay: rgba(0,0,0,0.55);
+    --gold: #b8860b;
+    --gold-muted: rgba(184, 134, 11, 0.12);
   }
 
   [data-theme="dark"] {
-    --bg: #0d0d0d;
-    --bg-alt: #1a1a1a;
+    --bg: #0a0a0a;
+    --bg-alt: #141414;
+    --bg-dark: #050505;
     --text: #e8e4de;
     --text-muted: #9a9590;
     --accent: #c93a3a;
     --accent-hover: #e04848;
-    --border: #2a2a2a;
-    --card-bg: #161616;
-    --card-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    --nav-bg: rgba(13, 13, 13, 0.95);
+    --accent-glow: rgba(201, 58, 58, 0.15);
+    --border: #222;
+    --card-bg: #111;
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3);
+    --nav-bg: rgba(10, 10, 10, 0.95);
     --hero-overlay: rgba(0,0,0,0.6);
+    --gold: #d4a017;
+    --gold-muted: rgba(212, 160, 23, 0.1);
   }
 
   html {
@@ -174,9 +195,9 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   }
 
   .nav-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -184,11 +205,22 @@ const { title, description = "The Narrow March — a daily call to arms for men 
 
   .nav-brand {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
   }
 
   .nav-brand:hover {
@@ -198,15 +230,31 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
   .nav-links a {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
   }
 
   .nav-links a:hover {
@@ -266,65 +314,191 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   [data-theme="light"] .moon { display: none; }
   [data-theme="dark"] .sun { display: none; }
 
+  /* ===== Page Header (banner style) ===== */
+  .page-hero {
+    position: relative;
+    padding: 10rem 0 5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .page-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .page-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.85) 100%);
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .page-hero-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .page-hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 550px;
+    line-height: 1.7;
+  }
+
+  /* ===== Decorative Elements ===== */
+  .decorative-line {
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .decorative-line-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .decorative-cross {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: var(--border);
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    margin: 3rem 0;
+  }
+
+  .decorative-cross::before,
+  .decorative-cross::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    max-width: 120px;
+  }
+
   /* ===== Footer ===== */
   .footer {
+    background: var(--bg-alt);
     border-top: 1px solid var(--border);
-    padding: 3rem 2rem;
-    margin-top: 4rem;
+    padding: 4rem 2rem 2rem;
+    margin-top: 0;
   }
 
   .footer-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    margin-bottom: 1rem;
   }
 
   .footer-name {
     font-family: var(--font-heading);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--text);
   }
 
   .footer-tagline {
     font-style: italic;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+  .footer-nav h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
   }
 
-  .footer-links a {
+  .footer-nav a {
+    display: block;
     color: var(--text-muted);
     font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-nav a:hover {
+    color: var(--accent);
+  }
+
+  .footer-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 1.5rem;
   }
 
   .footer-copy {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    text-align: center;
   }
 
   /* ===== Utilities ===== */
   .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
   }
 
   .section {
-    padding: 5rem 0;
+    padding: 6rem 0;
+  }
+
+  .section-alt {
+    background: var(--bg-alt);
   }
 
   .section-title {
@@ -342,25 +516,28 @@ const { title, description = "The Narrow March — a daily call to arms for men 
 
   .btn {
     display: inline-block;
-    padding: 0.85rem 2rem;
+    padding: 0.9rem 2.2rem;
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
   }
 
   .btn-primary {
     background: var(--accent);
     color: #fff;
+    box-shadow: 0 4px 16px var(--accent-glow);
   }
 
   .btn-primary:hover {
     background: var(--accent-hover);
     color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px var(--accent-glow);
   }
 
   .btn-outline {
@@ -372,6 +549,7 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   .btn-outline:hover {
     background: var(--accent);
     color: #fff;
+    transform: translateY(-1px);
   }
 
   .card {
@@ -379,6 +557,31 @@ const { title, description = "The Narrow March — a daily call to arms for men 
     border: 1px solid var(--border);
     padding: 2.5rem;
     box-shadow: var(--card-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+
+  [data-theme="dark"] .card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+
+  /* ===== Icon styling ===== */
+  .icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-glow);
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
   }
 
   /* ===== Responsive ===== */
@@ -410,7 +613,20 @@ const { title, description = "The Narrow March — a daily call to arms for men 
     }
 
     .section {
-      padding: 3rem 0;
+      padding: 4rem 0;
+    }
+
+    .page-hero {
+      padding: 8rem 0 3rem;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+    }
+
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
   }
 </style>

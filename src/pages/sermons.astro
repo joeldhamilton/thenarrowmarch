@@ -4,46 +4,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Sermons — The Narrow March" description="Verse-by-verse exposition through the books of the Bible.">
 
-  <section class="page-header">
-    <div class="container">
-      <h1 class="page-title">Sermons</h1>
-      <p class="page-subtitle">Verse-by-Verse Exposition</p>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="/images/hero-banner.jpg" alt="" />
+    </div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">Verse-by-Verse Exposition</p>
+      <h1>Sermons</h1>
+      <p class="page-hero-subtitle">No cherry-picking. No skipping the hard parts. We take the text as it comes.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 2rem;">
+  <!-- Intro -->
+  <section class="section">
     <div class="container">
-      <div class="sermons-content">
+      <div class="intro-block">
+        <div class="decorative-line decorative-line-center"></div>
+        <p class="intro-text">
+          Verse-by-verse exposition through the books of the Bible.
+          We take the text as it comes and let Scripture speak for itself.
+          Every word matters. Every verse has weight. We don't skip what's uncomfortable.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="sermons-intro">
-          <p>
-            Verse-by-verse exposition through the books of the Bible. No cherry-picking. No skipping the hard parts.
-            We take the text as it comes and let Scripture speak for itself.
-          </p>
+  <!-- Current Series -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="series-section">
+        <p class="series-label">Current Series</p>
+        <h2 class="series-title">Ephesians</h2>
+        <div class="decorative-line decorative-line-center"></div>
+        <p class="series-desc">
+          A letter from a prisoner to a church — about identity, warfare, and what it means to walk worthy of the calling.
+          We're going through it verse by verse.
+        </p>
+
+        <div class="series-coming-soon card">
+          <div class="card-accent-top"></div>
+          <div class="icon-circle" style="margin: 0 auto 1rem;">&#127909;</div>
+          <h3>Videos Coming Soon</h3>
+          <p>Sermon videos are currently in production and will be available here and on YouTube.</p>
+          <a href="https://www.youtube.com/@thenarrowmarch" class="btn btn-outline" target="_blank" rel="noopener">Subscribe on YouTube</a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="current-series card">
-          <h2>Current Series</h2>
-          <h3 class="series-name">Ephesians</h3>
-          <p>
-            A letter from a prisoner to a church — about identity, warfare, and what it means to walk worthy of the calling.
-            We're going through it verse by verse.
-          </p>
-          <p class="coming-soon">Videos coming soon.</p>
-        </div>
-
-        <div class="sermons-cta">
-          <p>Subscribe to the newsletter to receive daily exegesis from the current sermon series:</p>
-          <a href="https://blog.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe to The Narrow March</a>
-        </div>
-
-        <div class="youtube-link">
-          <p>
-            Sermons will also be available on
-            <a href="https://www.youtube.com/@thenarrowmarch" target="_blank" rel="noopener">YouTube</a>.
-          </p>
-        </div>
-
+  <!-- Newsletter CTA -->
+  <section class="cta-banner">
+    <div class="cta-banner-bg">
+      <img src="/images/banner-alt.jpg" alt="" />
+    </div>
+    <div class="container">
+      <div class="cta-content">
+        <h2>Go Deeper with Daily Exegesis</h2>
+        <div class="decorative-line decorative-line-center" style="background:#fff;"></div>
+        <p>Subscribe to The Narrow March newsletter to receive daily exegesis from the current sermon series. By Sunday, the Word isn't new to you — it's already in your bones.</p>
+        <a href="https://blog.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe to The Narrow March</a>
       </div>
     </div>
   </section>
@@ -51,79 +71,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-  .page-header {
-    padding-top: 7rem;
-    padding-bottom: 1rem;
-  }
-
-  .page-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .page-subtitle {
-    font-size: 1.1rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    margin-top: 0.5rem;
-  }
-
-  .sermons-content {
+  .intro-block {
     max-width: 700px;
     margin: 0 auto;
+    text-align: center;
   }
 
-  .sermons-intro p {
+  .intro-text {
     font-size: 1.15rem;
+    color: var(--text-muted);
     line-height: 1.9;
-    color: var(--text-muted);
-    margin-bottom: 3rem;
   }
 
-  .current-series {
-    margin-bottom: 3rem;
+  /* ===== Series Section ===== */
+  .series-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .current-series h2 {
-    font-size: 1rem;
+  .series-label {
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
   }
 
-  .series-name {
-    font-size: 1.8rem;
+  .series-title {
+    font-size: 3rem;
     color: var(--text);
     margin-bottom: 1rem;
   }
 
-  .current-series p {
+  .series-desc {
+    font-size: 1.1rem;
     color: var(--text-muted);
     line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .series-coming-soon {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+  }
+
+  .series-coming-soon .card-accent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .series-coming-soon h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .series-coming-soon p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ===== CTA Banner ===== */
+  .cta-banner {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+  }
+
+  .cta-banner-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .cta-banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cta-banner-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+    color: #fff;
     margin-bottom: 1rem;
   }
 
-  .coming-soon {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .sermons-cta {
+  .cta-content p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.05rem;
     margin-bottom: 2rem;
-  }
-
-  .sermons-cta p {
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-  }
-
-  .youtube-link p {
-    color: var(--text-muted);
-    border-top: 1px solid var(--border);
-    padding-top: 2rem;
+    line-height: 1.7;
   }
 </style>
