@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sermons — The Narrow March" description="Verse-by-verse exposition through the books of the Bible.">
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Sermons</h1>
+      <p class="page-subtitle">Verse-by-Verse Exposition</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="sermons-content">
+
+        <div class="sermons-intro">
+          <p>
+            Verse-by-verse exposition through the books of the Bible. No cherry-picking. No skipping the hard parts.
+            We take the text as it comes and let Scripture speak for itself.
+          </p>
+        </div>
+
+        <div class="current-series card">
+          <h2>Current Series</h2>
+          <h3 class="series-name">Ephesians</h3>
+          <p>
+            A letter from a prisoner to a church — about identity, warfare, and what it means to walk worthy of the calling.
+            We're going through it verse by verse.
+          </p>
+          <p class="coming-soon">Videos coming soon.</p>
+        </div>
+
+        <div class="sermons-cta">
+          <p>Subscribe to the newsletter to receive daily exegesis from the current sermon series:</p>
+          <a href="https://blog.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe to The Narrow March</a>
+        </div>
+
+        <div class="youtube-link">
+          <p>
+            Sermons will also be available on
+            <a href="https://www.youtube.com/@thenarrowmarch" target="_blank" rel="noopener">YouTube</a>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  .sermons-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .sermons-intro p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .current-series {
+    margin-bottom: 3rem;
+  }
+
+  .current-series h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .series-name {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .current-series p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .coming-soon {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .sermons-cta {
+    margin-bottom: 2rem;
+  }
+
+  .sermons-cta p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .youtube-link p {
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+</style>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Newsletter — The Narrow March" description="Daily exegesis from the week's sermon. Every week, one passage. Every day, we go deeper.">
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">The Narrow March Newsletter</h1>
+      <p class="page-subtitle">Daily Exegesis</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="newsletter-content">
+
+        <div class="newsletter-intro">
+          <p>
+            Most men hear a sermon and forget it by lunch. The Narrow March won't let you. Each week we take one passage and live in it —
+            daily exegesis that breaks the text open so deep that by Sunday, the Word preaches itself.
+            Scripture wasn't meant to be skimmed. Neither is this.
+          </p>
+        </div>
+
+        <div class="newsletter-features">
+          <div class="feature">
+            <h3>One Passage Per Week</h3>
+            <p>Tied to the weekly sermon. We don't hop around — we dig in and stay until the text has done its work.</p>
+          </div>
+          <div class="feature">
+            <h3>Daily Delivery</h3>
+            <p>Each day unpacks a different layer of the passage — context, language, theology, application. By Sunday, you own it.</p>
+          </div>
+          <div class="feature">
+            <h3>Verse by Verse</h3>
+            <p>No surface-level summaries. We break the text down word by word, because the details are where the power lives.</p>
+          </div>
+        </div>
+
+        <div class="newsletter-cta card">
+          <h2>Subscribe to The Narrow March</h2>
+          <p>Daily exegesis from the week's sermon. The Word isn't something you heard once — it's something you carry.</p>
+          <a href="https://blog.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe Now</a>
+        </div>
+
+        <div class="also-check">
+          <h3>Also from The Narrow March:</h3>
+          <p>
+            <a href="/daily-crusader"><strong>The Daily Crusader</strong></a> — a separate daily devotional at 5 AM,
+            drawn from the 365-day book. The Crusader gives you your marching orders. The Newsletter takes you deeper into the text.
+            They're built to work together.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  .newsletter-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .newsletter-intro p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+
+  .newsletter-features {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .feature p {
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .newsletter-cta {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .newsletter-cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-cta p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .also-check {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+  }
+
+  .also-check h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .also-check p {
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+</style>

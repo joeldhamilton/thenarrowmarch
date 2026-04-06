@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — The Narrow March">
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">About</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="about-content">
+
+        <div class="about-block">
+          <h2>The Modern Templar</h2>
+          <blockquote class="about-quote">
+            "He rides no horse. He carries no banner. He moves unseen — armored in prayer. Marching through cities of sin like salt through decay. A soldier not of empire — but of eternity."
+          </blockquote>
+        </div>
+
+        <div class="about-block">
+          <h2>Why "The Narrow March"</h2>
+          <p>
+            <strong>Narrow</strong> — the narrow path (Matthew 7:14). Difficulty. Discipline. Separation from the wide road that leads to destruction.
+          </p>
+          <p>
+            <strong>March</strong> — military movement. Daily steps. Sustained forward motion — not a sprint, but the long obedience in the same direction.
+          </p>
+          <p>
+            Together: step after step after step. The narrow path doesn't walk itself.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>Who This Is For</h2>
+          <p>
+            The Narrow March speaks to men who understand that faith is not passive. Men working on personal discipline and self-mastery.
+            Men who are tired of soft, comfortable Christianity that demands nothing and changes no one.
+          </p>
+          <p>
+            Whether you've drifted from the faith and are finding your way back, or you're seeking a faith that demands something of you —
+            this is the place where iron sharpens iron. No shortcuts. No comfort theology. Just the Word of God and the daily discipline to live by it.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>What We Believe</h2>
+          <p>
+            We hold to the historic Christian faith. Scripture alone is our authority. Salvation is by grace alone, through faith alone, in Christ alone,
+            to the glory of God alone. We believe the Bible is the inerrant, inspired Word of God — profitable for teaching, reproof, correction,
+            and training in righteousness.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h2>The Mission</h2>
+          <p>
+            We are not building an audience. We are forging soldiers. Every devotional, every sermon, every newsletter exists to accomplish one thing:
+            to equip men to follow the Lamb — not into comfort, but into the fire.
+          </p>
+          <p>The war has never ended. Only the armor has changed.</p>
+        </div>
+
+        <div class="about-cta">
+          <a href="/daily-crusader" class="btn btn-primary">Start the Daily Crusader</a>
+          <a href="/newsletter" class="btn btn-outline">Join the Newsletter</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .about-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-block {
+    margin-bottom: 3rem;
+  }
+
+  .about-block h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+
+  .about-block p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+  }
+
+  .about-quote {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .about-cta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+</style>
