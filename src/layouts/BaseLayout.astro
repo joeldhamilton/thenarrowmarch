@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title, description = "The Narrow March — a daily call to arms for men who refuse to sleepwalk through their faith." } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -13,7 +14,7 @@ const { title, description = "The Narrow March — a daily call to arms for men 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/jpeg" href="/images/profile.jpg" />
+    <link rel="icon" type="image/jpeg" href={`${base}images/profile.jpg`} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,8 +27,8 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   <body>
     <nav class="nav">
       <div class="nav-inner">
-        <a href="/" class="nav-brand">
-          <img src="/images/profile.jpg" alt="" class="nav-logo" />
+        <a href={base} class="nav-brand">
+          <img src={`${base}images/profile.jpg`} alt="" class="nav-logo" />
           The Narrow March
         </a>
         <button class="nav-toggle" aria-label="Toggle menu">
@@ -36,11 +37,11 @@ const { title, description = "The Narrow March — a daily call to arms for men 
           <span></span>
         </button>
         <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/daily-crusader">The Daily Crusader</a>
-          <a href="/newsletter">Newsletter</a>
-          <a href="/sermons">Sermons</a>
+          <a href={base}>Home</a>
+          <a href={`${base}about`}>About</a>
+          <a href={`${base}daily-crusader`}>The Daily Crusader</a>
+          <a href={`${base}newsletter`}>Newsletter</a>
+          <a href={`${base}sermons`}>Sermons</a>
           <button class="theme-toggle" aria-label="Toggle light/dark mode" id="theme-toggle">
             <span class="theme-icon sun">&#9788;</span>
             <span class="theme-icon moon">&#9790;</span>
@@ -57,16 +58,16 @@ const { title, description = "The Narrow March — a daily call to arms for men 
       <div class="footer-inner">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="/images/profile.jpg" alt="The Narrow March" class="footer-logo" />
+            <img src={`${base}images/profile.jpg`} alt="The Narrow March" class="footer-logo" />
             <p class="footer-name">The Narrow March</p>
             <p class="footer-tagline">"Do not follow the Lamb for comfort.<br/>Follow Him into the fire."</p>
           </div>
           <div class="footer-nav">
             <h4>Pages</h4>
-            <a href="/about">About</a>
-            <a href="/daily-crusader">The Daily Crusader</a>
-            <a href="/newsletter">Newsletter</a>
-            <a href="/sermons">Sermons</a>
+            <a href={`${base}about`}>About</a>
+            <a href={`${base}daily-crusader`}>The Daily Crusader</a>
+            <a href={`${base}newsletter`}>Newsletter</a>
+            <a href={`${base}sermons`}>Sermons</a>
           </div>
           <div class="footer-nav">
             <h4>Connect</h4>
