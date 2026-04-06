@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Newsletter — The Narrow March" description="Daily exegesis from the week's sermon. Every week, one passage. Every day, we go deeper.">
@@ -8,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src={`${base}images/banner-alt.jpg`} alt="" />
+      <img src="/images/banner-alt.jpg" alt="" />
     </div>
     <div class="page-hero-content">
       <p class="page-hero-label">Daily Exegesis</p>
@@ -65,7 +64,7 @@ const base = import.meta.env.BASE_URL;
   <!-- CTA Banner -->
   <section class="cta-banner">
     <div class="cta-banner-bg">
-      <img src={`${base}images/hero-banner.jpg`} alt="" />
+      <img src="/images/hero-banner.jpg" alt="" />
     </div>
     <div class="container">
       <div class="cta-content">
@@ -91,7 +90,7 @@ const base = import.meta.env.BASE_URL;
               They're built to work together.
             </p>
           </div>
-          <a href={`${base}daily-crusader`} class="btn btn-outline">Learn More</a>
+          <a href="/daily-crusader" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>

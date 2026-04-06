@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="About — The Narrow March">
@@ -8,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src={`${base}images/banner-alt.jpg`} alt="" />
+      <img src="/images/banner-alt.jpg" alt="" />
     </div>
     <div class="page-hero-content">
       <p class="page-hero-label">About</p>
@@ -22,7 +21,7 @@ const base = import.meta.env.BASE_URL;
     <div class="container">
       <div class="about-grid">
         <div class="about-img-col">
-          <img src={`${base}images/profile.jpg`} alt="The Narrow March" class="about-main-img" />
+          <img src="/images/profile.jpg" alt="The Narrow March" class="about-main-img" />
         </div>
         <div class="about-text-col">
           <div class="decorative-line"></div>
@@ -108,7 +107,7 @@ const base = import.meta.env.BASE_URL;
   <!-- Mission / CTA -->
   <section class="mission-banner">
     <div class="mission-bg">
-      <img src={`${base}images/hero-banner.jpg`} alt="" />
+      <img src="/images/hero-banner.jpg" alt="" />
     </div>
     <div class="container">
       <div class="mission-content">
@@ -120,8 +119,8 @@ const base = import.meta.env.BASE_URL;
         </p>
         <p class="mission-closer">The war has never ended. Only the armor has changed.</p>
         <div class="mission-ctas">
-          <a href={`${base}daily-crusader`} class="btn btn-primary">Start the Daily Crusader</a>
-          <a href={`${base}newsletter`} class="btn btn-outline btn-outline-light">Join the Newsletter</a>
+          <a href="/daily-crusader" class="btn btn-primary">Start the Daily Crusader</a>
+          <a href="/newsletter" class="btn btn-outline btn-outline-light">Join the Newsletter</a>
         </div>
       </div>
     </div>

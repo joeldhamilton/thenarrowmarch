@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="The Narrow March — Follow the Lamb into the Fire">
@@ -8,7 +7,7 @@ const base = import.meta.env.BASE_URL;
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <img src={`${base}images/hero-banner.jpg`} alt="A knight stands before a burning city, bearing the cross" />
+      <img src="/images/hero-banner.jpg" alt="A knight stands before a burning city, bearing the cross" />
     </div>
     <div class="hero-content">
       <p class="hero-label">For Men Who March the Narrow Path</p>
@@ -16,8 +15,8 @@ const base = import.meta.env.BASE_URL;
       <div class="hero-line"></div>
       <p class="hero-tagline">"Do not follow the Lamb for comfort.<br/>Follow Him into the fire."</p>
       <div class="hero-ctas">
-        <a href={`${base}daily-crusader`} class="btn btn-primary">Start the Daily Crusader</a>
-        <a href={`${base}newsletter`} class="btn btn-outline btn-outline-light">Join the Newsletter</a>
+        <a href="/daily-crusader" class="btn btn-primary">Start the Daily Crusader</a>
+        <a href="/newsletter" class="btn btn-outline btn-outline-light">Join the Newsletter</a>
       </div>
       <div class="hero-scroll">
         <span>&#8595;</span>
@@ -79,7 +78,7 @@ const base = import.meta.env.BASE_URL;
   <!-- Verse Banner -->
   <section class="verse-banner">
     <div class="verse-bg">
-      <img src={`${base}images/banner-alt.jpg`} alt="" />
+      <img src="/images/banner-alt.jpg" alt="" />
     </div>
     <div class="container">
       <blockquote class="verse">
@@ -94,7 +93,7 @@ const base = import.meta.env.BASE_URL;
     <div class="container">
       <div class="about-teaser">
         <div class="about-teaser-img">
-          <img src={`${base}images/profile.jpg`} alt="The Narrow March" />
+          <img src="/images/profile.jpg" alt="The Narrow March" />
         </div>
         <div class="about-teaser-text">
           <h2 class="section-title">The Modern Templar</h2>
@@ -103,7 +102,7 @@ const base = import.meta.env.BASE_URL;
             He rides no horse. He carries no banner. He moves unseen — armored in prayer.
             Marching through cities of sin like salt through decay. A soldier not of empire — but of eternity.
           </p>
-          <a href={`${base}about`} class="btn btn-outline">Learn More</a>
+          <a href="/about" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>
@@ -118,7 +117,7 @@ const base = import.meta.env.BASE_URL;
         <div class="decorative-line decorative-line-center"></div>
         <p class="sermons-teaser-text">Verse-by-verse exposition through the books of the Bible. No cherry-picking. No skipping the hard parts.</p>
         <div style="text-align:center;">
-          <a href={`${base}sermons`} class="btn btn-outline">Coming Soon</a>
+          <a href="/sermons" class="btn btn-outline">Coming Soon</a>
         </div>
       </div>
     </div>
