@@ -59,7 +59,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="card-desc">
             A devotional in your inbox every morning at 5 AM. Short, direct, rooted in Scripture — built to sharpen your discipline and anchor your day before the world gets a word in.
           </p>
-          <a href="https://crusader.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe</a>
+          <div class="card-ctas">
+            <a href="https://crusader.thenarrowmarch.com" class="btn btn-primary" target="_blank" rel="noopener">Subscribe</a>
+            <a href="https://www.amazon.com/Daily-Crusader-Days-Faith-Discipline/dp/B0GQPW9THK" class="btn btn-outline" target="_blank" rel="noopener">Get the Book</a>
+          </div>
         </div>
         <div class="card newsletter-card">
           <div class="card-accent-top"></div>
@@ -302,6 +305,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 0.95rem;
     margin-bottom: 2rem;
     line-height: 1.8;
+  }
+
+  .card-ctas {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   /* ===== Verse Banner ===== */

@@ -75,16 +75,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="book-section">
-        <div class="book-text">
-          <div class="decorative-line"></div>
-          <h2>The Book</h2>
-          <p class="book-title-full"><em>The Daily Crusader: 365 Days of Warrior Faith</em></p>
-          <p>
-            The newsletter draws from the full devotional book — a 365-day journey through Scripture
-            designed for men who take their faith seriously. Each entry is forged to cut through distraction
-            and anchor you in what matters.
-          </p>
-          <p class="coming-soon">Book availability coming soon.</p>
+        <div class="book-card card">
+          <div class="card-accent-top"></div>
+          <div class="book-card-inner">
+            <div class="book-info">
+              <p class="book-label">The Book</p>
+              <h2>The Daily Crusader: 365 Days of Faith & Discipline</h2>
+              <div class="decorative-line"></div>
+              <p>
+                The newsletter is drawn from this book — a 365-day devotional built for men who take their faith seriously.
+                Each day's entry is short, direct, and rooted in Scripture. No filler. No fluff. Just the Word and the discipline to live by it.
+              </p>
+              <p>
+                This is the full march — every day of the year, forged to cut through distraction and anchor you in what matters.
+                Start on any day. The path is waiting.
+              </p>
+              <a href="https://www.amazon.com/Daily-Crusader-Days-Faith-Discipline/dp/B0GQPW9THK" class="btn btn-primary" target="_blank" rel="noopener">Get the Book on Amazon</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -212,32 +220,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /* ===== Book ===== */
   .book-section {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
-  .book-text h2 {
+  .book-card {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem;
+  }
+
+  .book-card .card-accent-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .book-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .book-info h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: var(--text);
   }
 
-  .book-title-full {
-    font-size: 1.1rem;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    font-weight: 500;
-  }
-
-  .book-text p {
+  .book-info p {
     color: var(--text-muted);
     line-height: 1.8;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
   }
 
-  .coming-soon {
-    font-style: italic;
-    color: var(--accent);
-    font-weight: 500;
+  .book-info .btn {
+    margin-top: 0.5rem;
   }
 
   /* ===== Cross-link ===== */
