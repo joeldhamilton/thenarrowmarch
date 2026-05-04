@@ -113,6 +113,7 @@ const { title, description = "The Narrow March — a daily call to arms for men 
   :root {
     --font-heading: 'Cinzel', serif;
     --font-body: 'Inter', sans-serif;
+    --nav-height: 64px;
   }
 
   [data-theme="light"] {
@@ -200,6 +201,7 @@ const { title, description = "The Narrow March — a daily call to arms for men 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.75rem 2rem;
+    min-height: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -588,6 +590,24 @@ const { title, description = "The Narrow March — a daily call to arms for men 
 
   /* ===== Responsive ===== */
   @media (max-width: 768px) {
+    :root {
+      --nav-height: 72px;
+    }
+
+    .nav-inner {
+      padding: 0.75rem 1.5rem;
+    }
+
+    .nav-brand {
+      font-size: 0.95rem;
+      gap: 0.6rem;
+    }
+
+    .nav-logo {
+      width: 32px;
+      height: 32px;
+    }
+
     .nav-toggle {
       display: flex;
     }
